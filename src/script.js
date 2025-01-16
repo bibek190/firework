@@ -92,11 +92,6 @@ createFireworks(100);
 /**
  * Test
  */
-const test = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial()
-);
-scene.add(test);
 
 /**
  * Animate
