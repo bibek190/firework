@@ -67,28 +67,13 @@ renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 // Firework
-const createFireworks = (count) => {
-  const positionsArray = new Float32Array(count * 3);
-  for (let i = 0; i < count; i++) {
-    const i3 = i + 3;
-
-    positionsArray[i + 0] = Math.random() - 0.5;
-    positionsArray[i + 1] = Math.random() - 0.5;
-    positionsArray[i + 2] = Math.random() - 0.5;
+const createFireWork = () => {
+  const positionArray = 3.0;
+  for (let i = 0; i < sizes.length; i++) {
+    console.log(1);
   }
-  const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute(
-    "position",
-    new THREE.BufferAttribute(positionsArray, 3)
-  );
-  const material = new THREE.PointsMaterial();
-
-  //   Points
-  const fireWork = new THREE.Points(geometry, material);
-  scene.add(fireWork);
 };
-
-createFireworks(100);
+createFireWork();
 /**
  * Test
  */
