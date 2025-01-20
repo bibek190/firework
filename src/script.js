@@ -102,6 +102,7 @@ const createFireWork = (count, position, size) => {
     uniforms: {
       uSize: new THREE.Uniform(size),
       uResolution: new THREE.Uniform(sizes.resolution),
+      uTime: new THREE.Uniform(0),
     },
   });
   // Firework
@@ -121,7 +122,10 @@ createFireWork(
 /**
  * Animate
  */
+const clock = new THREE.Clock();
 const tick = () => {
+  const elapsedTime = clock.getElapsedTime();
+  console.log(elapsedTime);
   // Update controls
   controls.update();
 
